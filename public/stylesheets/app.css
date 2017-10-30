@@ -1,0 +1,152 @@
+@font-face {
+  font-family: CHINESETAKEAWAY;
+  src: url("CHINESETAKEAWAY.ttf");
+}
+
+body {
+  padding:10px;
+  background-image: url("../images/bruce.png"); 
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position-x: center;
+}
+
+.form-header {
+  font-family: CHINESETAKEAWAY;
+  font-size: 30px;
+}
+
+#search {
+  background: transparent;
+  border-radius: 0;
+}
+
+.help-block {
+  font-family: CHINESETAKEAWAY;
+  color: #FF0000;
+}
+
+/* Styling for album images */
+.img {
+  margin-bottom: 20px;
+  border: 1px solid #A5A5A5;
+  padding: 10px; 
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.img:hover {
+  opacity: 0.7;
+}
+
+.albums img {
+  max-height: 100%;
+  max-width: 100%;
+  cursor: pointer;
+}
+
+/* Styling for album image currently being played  */
+.playing {
+  border:5px solid #FF0000;
+}
+
+.album-name, .track-name {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Enter button stylng */
+#enter {
+  width: 80px;
+  background-color: #000000;
+  color: #FFFFFF;
+  font-size: 20px;
+  font-family: CHINESETAKEAWAY;
+  cursor: pointer;
+  border: none; 
+  border-radius: 0;
+}
+
+#enter:hover {
+  opacity: 0.7;
+}
+
+/* Styling for album track information */
+.boxer {
+   display: table;
+   border-collapse: collapse;
+   width: 100%;
+}
+ 
+.boxer .box-row {
+   display: table-row;
+   opacity: 0;
+}
+
+.boxer .box, .box-header {
+  display: table-cell;
+  padding-right: 15px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  border-bottom:1px solid #A5A5A5;
+  text-align: left;
+}
+
+.box-header {
+  font-weight: bold;
+}
+
+.box-play-stop {
+  margin-right: 10px;
+}
+
+/* Hyperlink styling */
+a, a:link, a:visited {
+  text-decoration:none;
+}
+
+a:hover {
+  opacity: 0.5;
+}
+
+/* Loader for page loading */
+#loader {
+  border: 16px solid #F3F3F3;
+  border-radius: 50%;
+  border-top: 16px solid #FF0000;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 1s linear infinite;
+  animation: spin 1s linear infinite;
+  position: fixed;
+  top: 45%;
+  left: 50%;
+  z-index: 999;
+  display: none;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/*Styling for devices with screens 768 pixels and larger */
+@media screen and (min-width: 768px) {
+  .track-name {
+    display: none;
+  }
+}
+
+/*Styling for devices with screens 992 pixels and larger */
+@media screen and (min-width: 992px) {
+  .albums {
+    max-height: 1200px;
+    overflow: auto;
+    overflow-x: hidden;
+  }
+}
